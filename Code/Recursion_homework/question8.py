@@ -1,5 +1,5 @@
 #WAP to input a number (E-digit or more). Arrange the digits of the number in ascending order and display the result.
-def sortdig(num, lis=None):
+def sortdig(num, lis):
     if num == 0:
         lis.sort()
         return lis
@@ -10,4 +10,4 @@ def sortdig(num, lis=None):
 
 
 A = int(input("Enter a number: "))
-print("The digits in order are:", sortdig(A))
+print("The digits in order are:", sortdig(A,[]))
