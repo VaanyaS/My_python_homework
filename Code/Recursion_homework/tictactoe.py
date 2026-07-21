@@ -16,10 +16,6 @@ def is_win(board, player):
 def turn(board, turns, player):
     num = int(input(f"Player {player}'s turn! Which square do you want to take (1-9): "))
 
-    if num < 1 or num > 9:
-        print("Please choose a number between 1 and 9.")
-        return turn(board, turns, player)
-
     if board[num - 1] == num:
         board[num - 1] = player
         turns += 1
@@ -37,7 +33,7 @@ def print_board(board):
     print(board[3], "|", board[4], "|", board[5])
     print("-----------")
     print(board[6], "|", board[7], "|", board[8])
-    print()
+
 
 
 def tic_tac_toe():
